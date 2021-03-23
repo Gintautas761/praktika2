@@ -21,7 +21,7 @@ $data = array
     ],
 );
 
-    print_r($data);
+echo json_encode($data)."\n";
 
     if (file_exists("failas.txt")) {
         $file = "failas.txt";
