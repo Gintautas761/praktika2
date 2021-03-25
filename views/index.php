@@ -1,44 +1,14 @@
-<?php
 
 
+<?php 
+        $title = 'index';
+        require_once 'Shared/header.php';
+    ?>
 
-$data = array
-(
-    [
-    'first_name' => 'Kiestis',
-    'age' => 29,
-    'gender' => 'male'
-    ],
-    [
-    'first_name' => 'Vytska',
-    'age' => 32,
-    'gender' => 'male'
-    ],
-    [
-    'first_name' => 'Karina',
-    'age' => 25,
-    'gender' => 'female'
-    ],
-);
+<form method="post" action="index.php"></form>
+<p>Pasirinkti konvertavimo tipą:</p>
+<a href="array_2_csv">Konvertuoti į csv failą</a><br>
+<a href="array_2_json">Konvertuoti į json failą</a><br>
+<a href="array_2_xml">Konvertuoti į xml failą</a><br>
 
-echo json_encode($data)."\n";
-
-    if (file_exists("failas.txt")) {
-        $file = "failas.txt";
-        $current = file_get_contents($file);
-    } else {
-        $myfile = fopen("failas.txt","w");
-        header("refresh:0");         
-    }
-
-?>
-<form action="process.php" method="post">
-    <textarea rows="20" cols="50" name="comment">
-        <?php
-        echo $current;
-        ?>
-    </textarea>
-
-    <input type="submit">
-
-</form>
+<?php require_once 'Shared/footer.php'; ?>

@@ -1,0 +1,49 @@
+:root {
+  --mainColor: #b342e7;
+}
+
+body {
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2em;
+  height: 100vh;
+  justify-content: center;
+  background-color: rgb(222, 238, 134);
+}
+
+a {
+  background: linear-gradient(
+    to bottom,
+    var(--mainColor) 0%,
+    var(--mainColor) 100%
+  );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size 0.2s;
+}
+
+a:hover {
+  background-size: 4px 50px;
+}
+
+input[type="submit"] {
+  background-color: rgb(12, 116, 14);
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
