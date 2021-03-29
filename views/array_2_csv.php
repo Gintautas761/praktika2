@@ -43,6 +43,9 @@
     </form>            
         <h3>Sugeneruotas masyvas</h3>
 
-    <?php print_r($_POST);?>    
+    <?php  if(isset($_POST["age"])){
+        print_r($_POST);
+        }
+        ?>    
 
     <?php require_once 'Shared/footer.php'; ?>

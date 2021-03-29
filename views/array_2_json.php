@@ -21,7 +21,7 @@
           }
  ?>  
     <div class="form-style-6">
-        <h1>Save Array in data.json file</h1>
+        <h1>Išsaugoti masyvą į json failą</h1>
     <form action="index.php">
         <button type="submit" class="btn btn-success" value="Back">Sugrįžti</button>
     </form>
@@ -46,7 +46,7 @@ if(isset($error)){
         <input type="submit" class="btn btn-primary" value="Patvirtinti" >        
     </div>
     </form>
-    <h3>Sugeneruotas masyvas</h3>
+    <h3>Sugeneruotas json</h3>
    
     <?php 
         if(isset($final_data)){

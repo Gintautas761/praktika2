@@ -1,5 +1,5 @@
-      <div id="footer">
-          <?php echo ' Copyright '  .  date ('Y-m-d');  ?>
+  <div id="footer">
+       <?php echo ' Copyright '  .  date ('Y-m-d');  ?>
       </div>
   </div>
 
