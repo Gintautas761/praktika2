@@ -1,8 +1,6 @@
 <?php
-namespace Controllers;
 
-class Controller{        
-       //sukuria views
+class Controller{
         public static function CreateView($viewName){
             require_once("./Views/$viewName.php");
         }

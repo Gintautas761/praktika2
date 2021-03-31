@@ -1,21 +1,10 @@
 <?php
-    spl_autoload_register(function($className) 
-    {
-        include dirname(__FILE__) . '\\' . str_replace('\\', "/", $className) . '.php';
-    });
-?>
-
-
-<?php 
+       spl_autoload_register(function($className)
+       {
+              include dirname(__FILE__) . '\\' . str_replace('\\', "/", $className) . '.php';
+       });
         $title = 'index';
         require_once 'Views/Shared/header.php';
-    ?>
-
-
-
-
-<?php
-    require_once('Classes/Routes.php');
+        require_once ('Routes.php');
+        require_once 'Views/Shared/footer.php';    
 ?>
-
-<?php require_once 'Views/Shared/footer.php'; ?>

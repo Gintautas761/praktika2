@@ -32,34 +32,14 @@ if(isset($error)){
      echo $error;
 }  
 ?>  
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label fs-2">Vardas</label>
-        <input type="text" name="first_name"class="form-control" id="formGroupExampleInput" placeholder="Vardas">
-    </div>
-    <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label fs-2">Metai</label>
-        <input type="number" name="age" class="form-control" id="formGroupExampleInput" placeholder="Metai">
-    </div>
-        <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label fs-2">Lytis</label>
-        <input type="text" name= "gender" class="form-control" id="formGroupExampleInput2" placeholder="Lytis">
-        <input type="submit" class="btn btn-primary" value="Patvirtinti" >        
-    </div>
-    </form>
+    <?php require_once 'Shared/form.php'; ?> 
     <h3>Sugeneruotas json</h3>
    
     <?php 
         if(isset($final_data)){
             print_r($final_data);
-         }
-    ?>
+         }       
 
-   
-   
-    
-       
-       
-
-    <?php require_once 'Shared/footer.php'; ?>
+     require_once 'Shared/footer.php'; ?>
 
 
