@@ -24,14 +24,30 @@
     <form action="index.php">
         <button type="submit" class="btn btn-success" value="Back">Sugrįžti</button>
     </form>
-<?php error_reporting (E_ALL ^ E_NOTICE); ?>
+<?php error_reporting (E_ALL ^ E_NOTICE); 
 
-<?php require_once 'Shared/form.php'; ?>          
+ require_once 'Shared/form.php'; ?>          
         <h3>Sugeneruotas masyvas</h3>
+
+        <?php
+    $array = file("failas.txt");
+
+    // // uzkoduoja koda json
+    // echo json_encode($array)."\n";
+
+
+
+    if (file_exists("failas.txt")) {
+        $file = "failas.txt";
+        $current = file_get_contents($file);
+    } else {
+        $myfile = fopen("failas.txt","w");
+        header("refresh:0");         
+    }
+
+?>
 
     <?php  if(isset($_POST["age"])){
         print_r($_POST);
         }
-        ?>    
-
-    <?php require_once 'Shared/footer.php'; ?>
+         require_once 'Shared/footer.php'; ?>
