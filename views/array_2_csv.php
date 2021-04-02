@@ -31,12 +31,6 @@
 
         <?php
     $array = file("failas.txt");
-
-    // // uzkoduoja koda json
-    // echo json_encode($array)."\n";
-
-
-
     if (file_exists("failas.txt")) {
         $file = "failas.txt";
         $current = file_get_contents($file);

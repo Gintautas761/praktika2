@@ -31,15 +31,31 @@
 if(isset($error)){  
      echo $error;
 }  
-?>  
-    <?php require_once 'Shared/form.php'; ?> 
+ require_once 'Shared/form.php'; ?> 
     <h3>Sugeneruotas json</h3>
    
     <?php 
-        if(isset($final_data)){
-            print_r($final_data);
-         }       
+        // 
+        if (file_exists("failas.txt")) {
+            $file = "failas.txt";
+            $current = file_get_contents($file);
+        }else {
+            $myfile = fopen("failas.txt","w");
+            header("refresh:0");
+        }
 
-     require_once 'Shared/footer.php'; ?>
+     ?>    
+    <form action ="procces.php" method="post">
+
+         <textarea row="20" cols="70" name="comment">
+         <?php
+            echo $current;
+            ?>
+         
+         </textarea>
+         <input type="submit">
+    </form>
+
+     <?php require_once 'Shared/footer.php'; ?>
 
 
